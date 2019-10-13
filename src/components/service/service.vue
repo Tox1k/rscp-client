@@ -67,6 +67,10 @@ export default {
         return 'Running'
       }
 
+      if (this.loading) {
+        return 'Loading'
+      }
+
       return this.service.status[0].toUpperCase() + this.service.status.slice(1)
     }
   },

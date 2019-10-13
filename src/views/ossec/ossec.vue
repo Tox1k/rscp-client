@@ -1,11 +1,17 @@
 <template>
-  <div class="container min-vw-100 min-vh-100 px-3 py-3 bg-light">
-    <p>Ossec</p>
+  <div class="container min-vw-100 h-100 px-3 py-3 bg-light">
+    <app-log api="ossec" lines="100"></app-log>
   </div>
 </template>
 
 <script>
+
+import Log from '@/components/log/log'
+
 export default {
+  components: {
+    appLog: Log
+  }
 }
 </script>
 
@@ -13,6 +19,5 @@ export default {
 .container {
   width: 100%;
   max-height: 500px;
-  // margin:  150px auto;
 }
 </style>
