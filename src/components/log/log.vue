@@ -46,7 +46,7 @@ export default {
 
     .line {
       display: block;
-      padding-bottom: 10px!important;
+      padding-bottom: 10px;
     }
 }
 </style>
