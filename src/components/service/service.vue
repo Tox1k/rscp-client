@@ -88,7 +88,6 @@ export default {
       }
     },
     async setStatus (command) {
-      const self = this
       try {
         this.loading = true
         const {
