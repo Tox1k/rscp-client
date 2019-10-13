@@ -1,9 +1,7 @@
 <template>
   <div class="container min-vw-100 h-100 px-3 py-3 bg-light">
     <b-card-group deck class="d-flex justify-content-center h-100">
-      <app-service :service="services.ossec"></app-service>
-      <app-service :service="services.suricata"></app-service>
-      <app-service :service="services.clamav"></app-service>
+      <app-service v-for="(service, index) in services" :key="index" :service="service" @status="service.status = $event"></app-service>
     </b-card-group>
   </div>
 </template>
@@ -15,23 +13,24 @@ import Service from '@/components/service/service'
 export default {
   data () {
     return {
-      services: {
-        ossec: {
-          name: 'Ossec',
-          img: 'ossec.png',
-          status: true
-        },
-        suricata: {
-          name: 'Suricata',
-          img: 'suricata.png',
-          status: true
-        },
-        clamav: {
-          name: 'ClamAV',
-          img: 'clamav.png',
-          status: true
-        }
-      }
+      services: [{
+        name: 'Ossec',
+        img: 'ossec.png',
+        status: undefined,
+        api: 'ossec'
+      },
+      {
+        name: 'Suricata',
+        img: 'suricata.png',
+        status: undefined,
+        api: 'suricata'
+      },
+      {
+        name: 'ClamAV',
+        img: 'clamav.png',
+        status: undefined, // running, dead, error
+        api: 'clamav'
+      }]
     }
   },
   components: {
