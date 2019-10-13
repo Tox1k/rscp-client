@@ -1,29 +1,20 @@
-# rscp-client
+<h1 align="center">
+  <!-- <img src="https://mpng.pngfly.com/20181124/qaj/kisspng-alienvault-logo-computer-security-ossim-font-5bf9020957c077.1786539115430456413594.jpg" height="100"><br/> -->
+  🛡️ Raspberry Security Control Panel 🛡️
+</h1>
+<p align="center">
+  Progetto Raspberry Security Control Panel.
+</p>
 
-## Project setup
-```
-npm install
-```
+## Getting Started
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Installazione
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Authors
 
-### Run your tests
-```
-npm run test
-```
+* **Oleksandr Soludchyk** - [Tox1k](https://github.com/Tox1k)
+* **Riccardo Sangiorgio** - [Richard1984](https://github.com/Richard1984/)
 
-### Lints and fixes files
-```
-npm run lint
-```
+## License
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
