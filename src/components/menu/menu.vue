@@ -1,6 +1,9 @@
 <template>
   <b-navbar toggleable="lg" type="dark" variant="dark">
-    <b-navbar-brand href="#">RSCP</b-navbar-brand>
+    <b-navbar-brand class="logo" to="/">
+      <i class="fas fa-fire"></i>
+      <span>RSCP</span>
+    </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -39,7 +42,11 @@
 </template>
 
 <script>
+
+import '@fortawesome/fontawesome-free/js/all.js'
+
 export default {
+
 }
 </script>
 
@@ -47,5 +54,16 @@ export default {
 .active {
   color: white;
   font-weight: medium;
+}
+
+.logo {
+
+  * {
+    display: inline-block;
+  }
+
+  span {
+    margin-left: 10px;
+  }
 }
 </style>

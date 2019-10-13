@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="route">
   <app-menu></app-menu>
   <!-- <transition name="panel" mode="out-in"> -->
   <keep-alive>
@@ -19,3 +19,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" media="screen">
+.route {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content auto;
+}
+</style>
