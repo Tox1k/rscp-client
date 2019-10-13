@@ -16,7 +16,8 @@
 
     <b-list-group flush>
       <b-list-group-item>
-        <div class="status" :style="'background-color:' + color + ';'"></div>
+        <i class="fas fa-circle-notch loading" v-if="loading"></i>
+        <i class="fas fa-circle" :style="'color:' + color + ';'" v-else></i>
         <span> {{ status }}</span>
       </b-list-group-item>
     </b-list-group>
@@ -41,6 +42,11 @@ import v1 from '@/utils/v1'
 
 export default {
   props: ['service'],
+  data () {
+    return {
+      loading: false
+    }
+  },
   async created () {
     await this.getStatus()
   },
@@ -57,6 +63,10 @@ export default {
       return color
     },
     status () {
+      if (!this.service.status) {
+        return 'Running'
+      }
+
       return this.service.status[0].toUpperCase() + this.service.status.slice(1)
     }
   },
@@ -74,7 +84,9 @@ export default {
       }
     },
     async setStatus (command) {
+      const self = this
       try {
+        this.loading = true
         const {
           data: {
             status
@@ -82,8 +94,10 @@ export default {
         } = await v1.post('/services/' + this.service.api + '/execute', {
           command
         })
+        this.loading = false
         return this.$emit('status', status)
       } catch (e) {
+        this.loading = false
         alert('Si è verificato un errore nel settare lo status del servizio.')
       }
     }
@@ -92,11 +106,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.status {
-  height: 15px;
-  width: 15px;
-  border-radius: 100%;
-  display: inline-block;
-  vertical-align: middle;
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  animation: rotate 1s infinite ease-in-out;
 }
 </style>

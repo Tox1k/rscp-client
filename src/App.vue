@@ -23,4 +23,24 @@
     }
   }
 }
+
+#nprogress {
+    position: fixed;
+    top: 0;
+    z-index: 100000000;
+    width: 100vw;
+    outline: none;
+
+    .bar {
+        height: 0.2rem;
+        background: linear-gradient(to right, #ed213a, #93291e);
+        outline: none;
+    }
+
+}
+
+.nprogress-container {
+  position: fixed;
+}
+
 </style>

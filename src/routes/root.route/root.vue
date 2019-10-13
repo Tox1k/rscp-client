@@ -12,6 +12,7 @@
 <script>
 
 import Menu from '@/components/menu/menu'
+import '@fortawesome/fontawesome-free/css/all.css'
 
 export default {
   components: {
