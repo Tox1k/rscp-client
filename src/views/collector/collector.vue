@@ -1,6 +1,6 @@
 <template>
 <div class="container min-vw-100 h-100 px-3 py-3 bg-light">
-  <app-log api="collector" name="Collector" lines="100"></app-log>
+  <app-log api="collector" name="Log" lines="100"></app-log>
   <b-card bg-variant="light" header="Set IP" class="text-left mt-3">
     <b-form inline>
     <b-form-input v-model="ip" pattern="^([0-9]{1,3}\.){3}[0-9]{1,3}$" placeholder="Enter IP address" class="mr-2"></b-form-input>
@@ -41,8 +41,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-    width: 100%;
-    max-height: 500px;
-}
 </style>
