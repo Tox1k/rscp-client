@@ -27,12 +27,16 @@ export default {
   },
   methods: {
     async getLogs () {
-      const { data: { log } } = await v1.get('/' + this.api + '/log', {
-        params: {
-          lines: this.lines
-        }
-      })
-      this.logs = log.split('\n')
+      try {
+        const { data: { log } } = await v1.get('/' + this.api + '/log', {
+          params: {
+            lines: this.lines
+          }
+        })
+        this.logs = log.split('\n')
+      } catch (e) {
+        console.error('Impossibile reperire i logs.')
+      }
     }
   }
 }

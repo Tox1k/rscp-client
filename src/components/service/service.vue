@@ -85,7 +85,7 @@ export default {
         } = await v1.get('/services/' + this.service.api + '/status')
         return this.$emit('status', status)
       } catch (e) {
-        console.log('Impossibile reperire lo status del servizio.')
+        console.error('Impossibile reperire lo status del servizio.')
       }
     },
     async setStatus (command) {
@@ -102,7 +102,7 @@ export default {
         return this.$emit('status', status)
       } catch (e) {
         this.loading = false
-        alert('Si è verificato un errore nel settare lo status del servizio.')
+        console.error('Si è verificato un errore nel settare lo status del servizio.')
       }
     }
   }
