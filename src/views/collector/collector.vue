@@ -1,6 +1,6 @@
 <template>
   <div class="container min-vw-100 h-100 px-3 py-3 bg-light">
-    <app-log api="suricata" lines="100"></app-log>
+    <app-log api="collector" name="Collector" lines="100"></app-log>
   </div>
 </template>
 
@@ -16,4 +16,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  width: 100%;
+  max-height: 500px;
+}
 </style>

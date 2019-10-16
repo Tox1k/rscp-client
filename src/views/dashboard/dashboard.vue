@@ -14,22 +14,22 @@ export default {
   data () {
     return {
       services: [{
-        name: 'Ossec',
+        name: 'Collector',
         img: 'ossec.png',
         status: undefined,
-        api: 'ossec'
+        api: 'collector'
       },
       {
-        name: 'Suricata',
+        name: 'IDS',
         img: 'suricata.png',
         status: undefined,
-        api: 'suricata'
+        api: 'ids'
       },
       {
-        name: 'ClamAV',
+        name: 'Antivirus',
         img: 'clamav.png',
         status: undefined, // running, dead, error
-        api: 'clamav'
+        api: 'antivirus'
       }]
     }
   },

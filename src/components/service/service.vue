@@ -1,6 +1,7 @@
 <template>
 <div class="align-self-center">
-  <b-card no-body style="max-width: 15rem;" :img-src="'/images/services/' + service.img" img-alt="Image" img-top>
+  <!-- <b-card no-body style="max-width: 15rem;" :img-src="'/images/services/' + service.img" :img-alt="service.name" img-top> -->
+  <b-card no-body style="max-width: 15rem; width: 15rem;">
     <template v-slot:header>
       <h4 class="mb-0">{{ service.name }}</h4>
     </template>
@@ -84,7 +85,7 @@ export default {
         } = await v1.get('/services/' + this.service.api + '/status')
         return this.$emit('status', status)
       } catch (e) {
-        alert('Impossibile reperire lo status del servizio.')
+        console.log('Impossibile reperire lo status del servizio.')
       }
     },
     async setStatus (command) {

@@ -1,5 +1,5 @@
 <template>
-  <b-card bg-variant="dark" header="OSSEC" text-variant="white" class="text-left">
+  <b-card bg-variant="dark" :header="name" text-variant="white" class="text-left">
     <b-card-text class="log" id="log">
       <span class="line" v-for="(log, index) in logs" :key="index">
         {{ log }}<br/>
@@ -13,7 +13,7 @@
 import v1 from '@/utils/v1'
 
 export default {
-  props: ['api', 'lines'],
+  props: ['api', 'lines', 'name'],
   data () {
     return {
       logs: ''

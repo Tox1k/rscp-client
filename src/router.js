@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import DashboardView from '@/views/dashboard/dashboard'
-import OssecView from '@/views/ossec/ossec'
-import SuricataView from '@/views/suricata/suricata'
-import ClamavView from '@/views/clamav/clamav'
+import CollectorView from '@/views/collector/collector'
+import IdsView from '@/views/ids/ids'
+import AntivirusView from '@/views/antivirus/antivirus'
 
 const loadView = view => () => import(`@/routes/${view}.vue`)
 
@@ -26,17 +26,17 @@ export default new Router({
       name: 'DashboardView',
       component: DashboardView
     }, {
-      path: 'ossec',
-      name: 'OssecView',
-      component: OssecView
+      path: 'collector',
+      name: 'CollectorView',
+      component: CollectorView
     }, {
-      path: 'suricata',
-      name: 'SuricataView',
-      component: SuricataView
+      path: 'ids',
+      name: 'IdsView',
+      component: IdsView
     }, {
-      path: 'clamav',
-      name: 'ClamavView',
-      component: ClamavView
+      path: 'antivirus',
+      name: 'AntivirusView',
+      component: AntivirusView
     }]
   }]
 })

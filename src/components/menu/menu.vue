@@ -9,9 +9,12 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item to="/ossec" active-class="active">OSSEC</b-nav-item>
+        <!-- <b-nav-item to="/ossec" active-class="active">OSSEC</b-nav-item>
         <b-nav-item to="/suricata" active-class="active">Suricata</b-nav-item>
-        <b-nav-item to="/clamav" active-class="active">ClamAV</b-nav-item>
+        <b-nav-item to="/clamav" active-class="active">ClamAV</b-nav-item> -->
+        <b-nav-item to="/collector" active-class="active">Collector</b-nav-item>
+        <b-nav-item to="/ids" active-class="active">IDS</b-nav-item>
+        <b-nav-item to="/antivirus" active-class="active">Antivirus</b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
