@@ -14,7 +14,7 @@ export default {
   data () {
     return {
       services: [{
-        name: 'Collector',
+        name: 'GATEWAY',
         img: 'ossec.png',
         status: undefined,
         api: 'collector'
@@ -26,7 +26,7 @@ export default {
         api: 'ids'
       },
       {
-        name: 'Antivirus',
+        name: 'ANTIVIRUS',
         img: 'clamav.png',
         status: undefined, // running, dead, error
         api: 'antivirus'
