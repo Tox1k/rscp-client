@@ -1,8 +1,7 @@
 {
-  "name": "rscp-client",
-  "short_name": "rscp-client",
-  "icons": [
-    {
+  "name": "RSCP",
+  "short_name": "RSCP",
+  "icons": [{
       "src": "./img/icons/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"

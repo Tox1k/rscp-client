@@ -17,19 +17,22 @@ export default {
         name: 'GATEWAY',
         img: 'ossec.png',
         status: undefined,
-        api: 'collector'
+        api: 'collector',
+        path: 'gateway'
       },
       {
         name: 'IDS',
         img: 'suricata.png',
         status: undefined,
-        api: 'ids'
+        api: 'ids',
+        path: 'ids'
       },
       {
         name: 'ANTIVIRUS',
         img: 'clamav.png',
         status: undefined, // running, dead, error
-        api: 'antivirus'
+        api: 'antivirus',
+        path: 'antivirus'
       }]
     }
   },

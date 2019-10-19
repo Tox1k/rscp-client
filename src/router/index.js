@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import DashboardView from '@/views/dashboard/dashboard'
-import CollectorView from '@/views/collector/collector'
+import CatewayView from '@/views/gateway/gateway'
 import IdsView from '@/views/ids/ids'
 import AntivirusView from '@/views/antivirus/antivirus'
 
@@ -23,9 +23,9 @@ const routes = [{
     name: 'DashboardView',
     component: DashboardView
   }, {
-    path: 'collector',
-    name: 'CollectorView',
-    component: CollectorView
+    path: 'gateway',
+    name: 'CatewayView',
+    component: CatewayView
   }, {
     path: 'ids',
     name: 'IdsView',

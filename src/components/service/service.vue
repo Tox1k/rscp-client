@@ -32,7 +32,7 @@
     </b-card-body>
 
     <b-card-footer>
-      <b-link :to="'/' + service.api" class="card-link">Configure</b-link>
+      <b-link :to="'/' + service.path" class="card-link">Configure</b-link>
     </b-card-footer>
   </b-card>
 </div>

@@ -12,7 +12,7 @@
         <!-- <b-nav-item to="/ossec" active-class="active">OSSEC</b-nav-item>
         <b-nav-item to="/suricata" active-class="active">Suricata</b-nav-item>
         <b-nav-item to="/clamav" active-class="active">ClamAV</b-nav-item> -->
-        <b-nav-item to="/collector" active-class="active">COLLECTOR</b-nav-item>
+        <b-nav-item to="/gateway" active-class="active">GATEWAY</b-nav-item>
         <b-nav-item to="/ids" active-class="active">IDS</b-nav-item>
         <b-nav-item to="/antivirus" active-class="active">ANTIVIRUS</b-nav-item>
       </b-navbar-nav>
