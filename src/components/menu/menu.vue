@@ -59,6 +59,9 @@ export default {
       }, {
         to: '/config',
         name: 'CONFIG'
+      }, {
+        to: '/dhcp',
+        name: 'DHCP'
       }]
     }
   }

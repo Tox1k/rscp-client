@@ -1,6 +1,5 @@
 <template>
 <div class="container min-vw-100 h-100 px-3 py-3 bg-light">
-
   <b-card bg-variant="ligth" header="Network Settings" class="text-left">
     <b-card-text class="log" id="log">
       <b-form>
@@ -10,7 +9,7 @@
           </b-form-group>
         </b-form-group>
         <b-form-group label-cols-lg="3" label="Network Address" label-size="lg" label-class="font-weight-bold pt-0" class="mb-0">
-          <b-form-group label="From:" label-for="input-1" description="Network Address">
+          <b-form-group label="Network Address:" label-for="input-1" description="Network Address">
             <!-- <b-input-group prepend="From" class="mb-2 mr-sm-2 mb-sm-0"> -->
               <b-form-input v-model="network" pattern="^([0-9]{1,3}\.){3}[0-9]{1,3}$" placeholder="Enter Network Address" class="mr-2"></b-form-input>
             <!-- </b-input-group> -->
