@@ -20,12 +20,12 @@
               <b-form-input v-model="subnet" pattern="^([0-9]{1,3}\.){3}[0-9]{1,3}$" placeholder="Enter Subnet Mask" class="mr-2"></b-form-input>
             <!-- </b-input-group> -->
           </b-form-group>
-          <b-form-group label="From:" label-for="input-1" description="DHCP Range">
+          <b-form-group label="Starting IP Address" label-for="input-1" description="DHCP Range Starting IP Address">
             <b-input-group prepend="From" class="mb-2 mr-sm-2 mb-sm-0">
               <b-form-input type="number" min="0" max="256" step="1" id="input-1" v-model="range.start" placeholder="Enter IP address" class="mr-2"></b-form-input>
             </b-input-group>
           </b-form-group>
-          <b-form-group label="To:" label-for="input-1" description="DHCP Range">
+          <b-form-group label="Ending IP Address" label-for="input-1" description="DHCP Range Ending IP Address">
             <b-input-group prepend="To" class="mb-2 mr-sm-2 mb-sm-0">
               <b-form-input type="number" min="0" max="256" step="1" v-model="range.end" placeholder="Enter IP address" class="mr-2"></b-form-input>
             </b-input-group>
