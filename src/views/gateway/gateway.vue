@@ -3,9 +3,9 @@
   <app-log api="collector" name="Log" lines="100"></app-log>
   <b-card bg-variant="light" header="Set IP" class="text-left mt-3">
     <b-form inline>
-    <b-form-input v-model="ip" pattern="^([0-9]{1,3}\.){3}[0-9]{1,3}$" placeholder="Enter IP address" class="mr-2"></b-form-input>
-    <b-button variant="success" @click="setIp">Set</b-button>
-  </b-form>
+      <b-form-input v-model="ip" pattern="^([0-9]{1,3}\.){3}[0-9]{1,3}$" placeholder="Enter IP address" class="mr-2"></b-form-input>
+      <b-button variant="success" @click="setIp">Set</b-button>
+    </b-form>
   </b-card>
 </div>
 </template>

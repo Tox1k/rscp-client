@@ -4,6 +4,7 @@ import DashboardView from '@/views/dashboard/dashboard'
 import CatewayView from '@/views/gateway/gateway'
 import IdsView from '@/views/ids/ids'
 import AntivirusView from '@/views/antivirus/antivirus'
+import ConfigView from '@/views/config/config'
 
 const loadView = view => () => import(`@/routes/${view}.vue`)
 
@@ -34,6 +35,10 @@ const routes = [{
     path: 'antivirus',
     name: 'AntivirusView',
     component: AntivirusView
+  }, {
+    path: 'config',
+    name: 'ConfigView',
+    component: ConfigView
   }]
 }]
 

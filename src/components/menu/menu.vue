@@ -12,9 +12,7 @@
         <!-- <b-nav-item to="/ossec" active-class="active">OSSEC</b-nav-item>
         <b-nav-item to="/suricata" active-class="active">Suricata</b-nav-item>
         <b-nav-item to="/clamav" active-class="active">ClamAV</b-nav-item> -->
-        <b-nav-item to="/gateway" active-class="active">GATEWAY</b-nav-item>
-        <b-nav-item to="/ids" active-class="active">IDS</b-nav-item>
-        <b-nav-item to="/antivirus" active-class="active">ANTIVIRUS</b-nav-item>
+        <b-nav-item v-for="(el, index) in menu" :key="index" :to="el.to" active-class="active">{{ el.name }}</b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -47,7 +45,23 @@
 <script>
 
 export default {
-
+  data () {
+    return {
+      menu: [{
+        to: '/gateway',
+        name: 'GATEWAY'
+      }, {
+        to: '/ids',
+        name: 'IDS'
+      }, {
+        to: '/antivirus',
+        name: 'ANTIVIRUS'
+      }, {
+        to: '/config',
+        name: 'CONFIG'
+      }]
+    }
+  }
 }
 </script>
 
